@@ -42,11 +42,13 @@ namespace C0730066_Assignment4
                
 
                 while ((ln = file.ReadLine()) != null)
+
                 {
                     Console.WriteLine(ln);
                     Beowulf.Add(ln);
                     counter++;
                 }
+
                 file.Close();
                 Console.WriteLine($"File contains {counter} lines.");
                 Console.WriteLine("the number of words in the string: {0}", words);
