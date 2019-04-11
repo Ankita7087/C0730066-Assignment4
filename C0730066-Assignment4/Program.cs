@@ -26,9 +26,9 @@ namespace C0730066_Assignment4
         public void Run()
         {
             this.ReadTextFiles();
-           
+
         }
-            
+
         public void ReadTextFiles()
         {
             //Read file using StreamReader. Reads file line by line
@@ -37,9 +37,9 @@ namespace C0730066_Assignment4
                 int words = 1;
                 int counter = 0;
                 string ln;
-               
-                
-               
+
+
+
 
                 while ((ln = file.ReadLine()) != null)
 
@@ -81,6 +81,7 @@ namespace C0730066_Assignment4
         public void ProcessArrayList()
         {
             int LineNumber = 0;
+            int LineNumbertwo = 0;
             foreach (var line in Beowulf)
 
             {
@@ -93,19 +94,40 @@ namespace C0730066_Assignment4
                 }
             }
             Console.WriteLine(LineNumber);
+
+            foreach (var line in Beowulf)
+            {
+                if (ContainWord(line.ToString().ToLower(), "fare") && !ContainWord(line.ToString().ToLower(), "war"))
+                {
+                    Console.WriteLine(line);
+                    Console.WriteLine("line number is {0}", LineNumbertwo);
+                    LineNumbertwo++;
+                    }
+            }
+            Console.WriteLine(LineNumbertwo);
         }
 
 
-        public bool ContainWord(string line, string Word)
+
+
+    public bool ContainWord(string line, string Word)
+    {
+        if (line.Contains(Word) == true)
         {
-            if (line.Contains(Word) == true)
-            {
-                return true;
-            }
-            return false;
+            return true;
+        }
+        return false;
+
         }
     }
 }
+
+
+
+    
+
+
+
 
 
 
