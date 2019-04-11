@@ -1,0 +1,9 @@
+How many lines in total are there in the file:4091
+
+How many WORDS are there in the file: 42891
+
+Line numbers of teh lines which contain BOTH of these words Sea and Fare (cover both upper and lower case):10
+
+Line numbers of the lines which contain the word Fare Without the word war: 14
+
+Average number of letters per word returned as a float:4.7
